@@ -8,11 +8,9 @@ export const Page = styled.div`
   ${(props: PageProps) =>
     props.background &&
     css`
-      background: url(${props.background});
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
+      background: url(${props.background}) no-repeat center;
+      background-size: auto 100%;
     `};
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
 `;
