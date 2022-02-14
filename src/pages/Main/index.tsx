@@ -1,6 +1,14 @@
 import React from "react";
-import { Button, Text } from "../../components/atoms";
+import { Page } from "../../components/atoms";
 
 export default function Main() {
-  return <div>메인페이지</div>;
+  return (
+    <div>
+      <Page background="/images/main_img.jpeg" />
+      <Page />
+      <Page />
+      <Page />
+      <Page />
+    </div>
+  );
 }
