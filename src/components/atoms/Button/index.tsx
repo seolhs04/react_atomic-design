@@ -4,12 +4,24 @@ interface ButtonProps {
   innerText: string;
   ButtonColor?: "yellow" | "navy";
   size?: "small" | "medium" | "large";
+  margin?: string;
   onClick?: () => void;
 }
 
-export default function Button({ innerText, onClick, ButtonColor, size = "medium" }: ButtonProps) {
+export default function Button({
+  innerText,
+  onClick,
+  ButtonColor,
+  margin,
+  size = "medium",
+}: ButtonProps) {
   return (
-    <S.Button onClick={onClick} size={size} ButtonColor={ButtonColor}>
+    <S.Button
+      margin={margin}
+      onClick={onClick}
+      size={size}
+      ButtonColor={ButtonColor}
+    >
       {innerText}
     </S.Button>
   );

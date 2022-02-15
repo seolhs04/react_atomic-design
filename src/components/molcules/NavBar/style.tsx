@@ -10,4 +10,5 @@ export const NavBar = styled.div`
   box-shadow: rgb(189 189 189 / 20%) 10px 10px 30px 0px;
   background: white;
   opacity: 0.9;
+  z-index: 99;
 `;

@@ -1,6 +1,9 @@
 import React from "react";
 import { Button, FlexBox, Image, Page, Text } from "../../components/atoms";
 import { Card, Title } from "../../components/molcules";
+import { PlaceView } from "../../components/organisms";
+import { places } from "../../constants/places";
+import { solutions } from "../../constants/solution";
 
 export default function Main() {
   return (
@@ -12,24 +15,23 @@ export default function Main() {
           text1="개인, 기업, 남녀노소 모두 사용 가능한 공유창고"
         />
         <FlexBox gap="1rem">
-          <Card
-            backgroundColor="#e7e6e2"
-            width="20rem"
-            height="30rem"
-            img="/images/selfStorage_img.jpeg"
-          />
-          <Card
-            backgroundColor="#e9f8f7"
-            width="20rem"
-            height="30rem"
-            img="/images/selfStorage_img2.jpeg"
-          />
-          <Card
-            backgroundColor="#fef9e5"
-            width="20rem"
-            height="30rem"
-            img="/images/selfStorage_img3.jpeg"
-          />
+          {solutions.map((item, idx) => {
+            return (
+              <Card
+                key={idx}
+                backgroundColor={item.backgroundColor}
+                title={item.title}
+                name={item.name}
+                text1={item.text1}
+                text2={item.text2}
+                width="20rem"
+                height="30rem"
+                img={`/images/selfStorage_img${item.id}.jpeg`}
+              >
+                <Button innerText="상세 설명" ButtonColor="navy" />
+              </Card>
+            );
+          })}
         </FlexBox>
       </Page>
       <Page>
@@ -62,6 +64,7 @@ export default function Main() {
               size="medium"
               bold={true}
               color="324a5e"
+              margin="0 0 0.5em 0"
             />
             <Text
               innerText="24시간 간편하고 안전하게 나만의 공유창고."
@@ -69,10 +72,15 @@ export default function Main() {
             />
             <Text innerText="고객센터:" />
             <Text innerText="월요일 – 금요일: 오전 10시 ~ 오후 7시" />
-            <Text innerText="(주말 및 공휴일 휴무)" />
+            <Text innerText="(주말 및 공휴일 휴무)" margin="0 0 1em 0" />
+            <FlexBox gap="0.5em">
+              <Button innerText="바로 신청하기" ButtonColor="yellow" />
+              <Button innerText="1초 견적받기" ButtonColor="navy" />
+            </FlexBox>
           </FlexBox>
           <Image src="/images/main_img3.jpeg" width="20rem" />
         </FlexBox>
+        <PlaceView data={places} />
       </Page>
       <Page />
     </div>

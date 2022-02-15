@@ -1,20 +1,33 @@
-import { Image, Text } from "../../atoms";
+import { ReactElement } from "react";
+import { FlexBox, Image, Text } from "../../atoms";
 
 import * as S from "./style";
 
 interface CardProps {
-  backgroundColor: string;
+  backgroundColor?: string;
   width: string;
   height: string;
+  title?: string;
+  name: string;
+  border?: string;
+  text1?: string;
+  text2?: string;
   img: string;
+  children: ReactElement;
   onClick?: () => void;
 }
 
 export default function Card({
-  backgroundColor,
+  backgroundColor = "white",
   width,
   height,
+  title,
+  name,
+  border = "none",
+  text1,
+  text2,
   img,
+  children,
   onClick,
 }: CardProps) {
   return (
@@ -23,12 +36,16 @@ export default function Card({
       backgroundColor={backgroundColor}
       width={width}
       height={height}
+      border={border}
     >
       <Image src={img} width="100%" />
-      <Text innerText="방문형" />
-      <Text innerText="셀프스토리지" />
-      <Text innerText="장기 보관 시" />
-      <Text innerText="최대 30%할인" />
+      <FlexBox direction="column" gap="0.3em">
+        <Text innerText={title} bold={true} size="small" color="#324a5e" />
+        <Text innerText={name} bold={true} size="medium" color="#324a5e" />
+        <Text innerText={text1} size="small" color="#9b9b9b" />
+        <Text innerText={text2} size="small" color="#9b9b9b" />
+        {children}
+      </FlexBox>
     </S.Card>
   );
 }

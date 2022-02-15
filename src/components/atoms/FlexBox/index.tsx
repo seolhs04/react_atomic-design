@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import * as S from "./style";
 
 interface FlexBoxProps {
@@ -9,7 +10,7 @@ interface FlexBoxProps {
   margin?: string;
   gap?: string;
   direction?: "column" | "row";
-  children: JSX.Element[];
+  children: ReactElement | ReactElement[];
 }
 
 export default function FlexBox({
@@ -34,7 +35,7 @@ export default function FlexBox({
       width={width}
       height={height}
     >
-      {children}
+      {children && children}
     </S.FlexBox>
   );
 }

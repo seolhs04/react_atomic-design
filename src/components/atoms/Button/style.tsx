@@ -3,12 +3,14 @@ import styled, { css } from "styled-components";
 interface ButtonProps {
   ButtonColor?: "yellow" | "navy";
   size?: "small" | "medium" | "large";
+  margin?: string;
 }
 
 export const Button = styled.button`
   font-weight: bold;
   border-radius: 4rem;
   padding: 0.5rem 1rem;
+  margin: ${(props: ButtonProps) => props.margin};
   cursor: pointer;
   ${(props: ButtonProps) => {
     switch (props.ButtonColor) {
