@@ -45,12 +45,12 @@ export const Button = styled.button`
       case "medium":
         return css`
           min-width: 8rem;
-          min-height: 3rem;
+          min-height: 2rem;
         `;
       case "large":
         return css`
           min-width: 12rem;
-          min-height: 3rem;
+          min-height: 2rem;
         `;
     }
   }}

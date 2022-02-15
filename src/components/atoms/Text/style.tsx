@@ -4,11 +4,13 @@ interface TextProps {
   color: string;
   size?: "small" | "medium" | "large";
   bold?: boolean;
+  margin?: string;
   hover?: boolean;
 }
 
 export const Text = styled.div`
   width: fit-content;
+  margin:${(props: TextProps) => props.margin};
   font-weight: ${(props: TextProps) => (props.bold ? "bold" : "inherit")}};
   ${(props: TextProps) =>
     props.hover &&
