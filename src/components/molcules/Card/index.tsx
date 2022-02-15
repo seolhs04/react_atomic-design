@@ -13,6 +13,7 @@ interface CardProps {
   text1?: string;
   text2?: string;
   img: string;
+  textGap?: string;
   children: ReactElement;
   onClick?: () => void;
 }
@@ -27,6 +28,7 @@ export default function Card({
   text1,
   text2,
   img,
+  textGap = "0.3em",
   children,
   onClick,
 }: CardProps) {
@@ -39,7 +41,7 @@ export default function Card({
       border={border}
     >
       <Image src={img} width="100%" />
-      <FlexBox direction="column" gap="0.3em">
+      <FlexBox direction="column" gap={textGap}>
         <Text innerText={title} bold={true} size="small" color="#324a5e" />
         <Text innerText={name} bold={true} size="medium" color="#324a5e" />
         <Text innerText={text1} size="small" color="#9b9b9b" />

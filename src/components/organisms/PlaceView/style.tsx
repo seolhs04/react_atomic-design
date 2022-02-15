@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const PlaceView = styled.div`
   margin: 4rem;
+  & > div {
+    padding: 1em;
+  }
   & > div > div img {
     height: 55%;
   }
@@ -15,6 +18,9 @@ export const PlaceView = styled.div`
     :focus {
       background: black;
     }
+  }
+  & .slick-dots {
+    left: -3px;
   }
 `;
 export const SlickButton = styled.button``;
