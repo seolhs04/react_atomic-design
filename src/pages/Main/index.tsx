@@ -1,9 +1,8 @@
 import React from "react";
 import { Button, FlexBox, Image, Page, Text } from "../../components/atoms";
 import { Card, ExplainBox, Title } from "../../components/molcules";
-import { PlaceView } from "../../components/organisms";
-import { places } from "../../constants/places";
-import { solutions } from "../../constants/solution";
+import { CardSlide } from "../../components/organisms";
+import { boxs, solutions, places, areas } from "../../constants";
 
 export default function Main() {
   return (
@@ -71,7 +70,7 @@ export default function Main() {
           <Button innerText="바로 신청하기" ButtonColor="yellow" />
           <Button innerText="1초 견적받기" ButtonColor="navy" />
         </ExplainBox>
-        <PlaceView data={places} />
+        <CardSlide data={places} />
         <ExplainBox
           backgroundColor="#e9f8f7"
           image="/images/main_img4.jpeg"
@@ -84,6 +83,7 @@ export default function Main() {
           <Button innerText="바로 신청하기" ButtonColor="yellow" />
           <Button innerText="총알 견적 받기" ButtonColor="navy" />
         </ExplainBox>
+        <CardSlide data={boxs} />
         <ExplainBox
           backgroundColor="#fef9e5"
           image="/images/main_img5.jpeg"
@@ -97,8 +97,8 @@ export default function Main() {
           <Button innerText="바로 신청하기" ButtonColor="yellow" />
           <Button innerText="로켓 견적 받기" ButtonColor="navy" />
         </ExplainBox>
+        <CardSlide data={areas} />
       </Page>
-      <Page />
     </div>
   );
 }

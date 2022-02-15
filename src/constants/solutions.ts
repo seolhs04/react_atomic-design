@@ -1,4 +1,4 @@
-export const solutions: {
+const solutions: {
   id: number;
   title: string;
   name: string;
@@ -35,3 +35,4 @@ export const solutions: {
     img: "/images/selfStorage_img3.jpeg",
   },
 ];
+export default solutions;

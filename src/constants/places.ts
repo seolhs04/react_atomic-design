@@ -1,4 +1,4 @@
-export const places: {
+const places: {
   id: number;
   name: string;
   text: string;
@@ -41,3 +41,4 @@ export const places: {
     img: "/images/place6.jpeg",
   },
 ];
+export default places;

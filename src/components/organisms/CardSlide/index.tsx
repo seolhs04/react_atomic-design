@@ -15,7 +15,7 @@ interface PlaceViewProps {
   }[];
 }
 
-export default function PlaceView({ data }: PlaceViewProps) {
+export default function CardSlide({ data }: PlaceViewProps) {
   const settings = {
     dots: true,
     infinite: true,

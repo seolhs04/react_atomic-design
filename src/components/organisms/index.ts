@@ -1,1 +1,1 @@
-export { default as PlaceView } from "./PlaceView";
+export { default as CardSlide } from "./CardSlide";
