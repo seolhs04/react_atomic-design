@@ -14,7 +14,7 @@ export default function ExplainBox({
   children,
 }: ExplainBoxProps) {
   return (
-    <FlexBox background={backgroundColor}>
+    <FlexBox background={backgroundColor} justifyContent="center">
       <Image src={image} width="20rem" />
       <FlexBox direction="column" margin="0 3em" padding="2em">
         <div>

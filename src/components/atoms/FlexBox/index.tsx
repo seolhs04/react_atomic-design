@@ -9,6 +9,7 @@ interface FlexBoxProps {
   padding?: string;
   margin?: string;
   gap?: string;
+  justifyContent?: string;
   direction?: "column" | "row";
   children: ReactElement | ReactElement[];
 }
@@ -22,12 +23,14 @@ export default function FlexBox({
   margin,
   width,
   height,
+  justifyContent,
   background,
 }: FlexBoxProps) {
   return (
     <S.FlexBox
       gap={gap}
       flex={flex}
+      justifyContent={justifyContent}
       direction={direction}
       background={background}
       padding={padding}

@@ -8,6 +8,7 @@ interface FlexBoxProps {
   gap?: string;
   padding?: string;
   margin?: string;
+  justifyContent?: string;
   direction?: string;
 }
 
@@ -21,7 +22,7 @@ export const FlexBox = styled.div`
   background: ${(props: FlexBoxProps) => props.background};
   flex-direction: ${(props: FlexBoxProps) => props.direction};
   display: flex;
-  justify-content: center;
+  justify-content: ${(props: FlexBoxProps) => props.justifyContent};
   align-items: center;
   flex-wrap: wrap;
 `;
