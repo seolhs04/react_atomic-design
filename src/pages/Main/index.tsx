@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, FlexBox, Image, Page, Text } from "../../components/atoms";
-import { Card, ExplainBox, Title } from "../../components/molcules";
-import { CardSlide } from "../../components/organisms";
+import { Card, CheckBox, ExplainBox, Title } from "../../components/molcules";
+import { CardSlide, IntroTable } from "../../components/organisms";
 import { boxs, solutions, places, areas } from "../../constants";
 
 export default function Main() {
@@ -84,6 +84,18 @@ export default function Main() {
           <Button innerText="총알 견적 받기" ButtonColor="navy" />
         </ExplainBox>
         <CardSlide data={boxs} />
+        <FlexBox margin="2em" direction="column">
+          {[
+            "무료 픽업",
+            "무료 플라스틱 박스 대여",
+            "무료 보험 물품당 최대 50만원",
+            "빠른 배송",
+            "저렴한 배송비",
+            "온도∙습도 제어",
+          ].map((text, idx) => (
+            <CheckBox key={idx} innerText={text} />
+          ))}
+        </FlexBox>
         <ExplainBox
           backgroundColor="#fef9e5"
           image="/images/main_img5.jpeg"
@@ -98,6 +110,22 @@ export default function Main() {
           <Button innerText="로켓 견적 받기" ButtonColor="navy" />
         </ExplainBox>
         <CardSlide data={areas} />
+        <FlexBox margin="2em" direction="column">
+          {[
+            "빠른 배송",
+            "업계최초 픽업∙보관∙배송 한번에 가능",
+            "무료 보험 물품당 최대 50만원",
+            "온도∙습도 제어",
+          ].map((text, idx) => (
+            <CheckBox key={idx} innerText={text} />
+          ))}
+        </FlexBox>
+      </Page>
+      <Page background="/images/main_img6.jpeg">
+        <FlexBox direction="column">
+          <Title title="바이러스 안심 공유창고" />
+          <IntroTable />
+        </FlexBox>
       </Page>
     </div>
   );
