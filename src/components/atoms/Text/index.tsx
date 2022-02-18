@@ -15,7 +15,7 @@ export default function Text({
   onClick,
   color = "black",
   margin,
-  size = "small",
+  size = "medium",
   bold = false,
   hover = false,
 }: TextProps) {

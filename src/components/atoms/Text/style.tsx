@@ -25,15 +25,15 @@ export const Text = styled.div`
       switch (props.size) {
         case "small":
           return css`
-            font-size: 1em;
+            font-size: 0.7em;
           `;
         case "medium":
           return css`
-            font-size: 1.5em;
+            font-size: 1em;
           `;
         case "large":
           return css`
-            font-size: 2em;
+            font-size: 1.5em;
           `;
       }
     }};
