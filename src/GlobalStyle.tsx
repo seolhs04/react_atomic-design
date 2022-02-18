@@ -27,6 +27,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+	font-family: 'Noto Sans KR', sans-serif;
 	line-height: 1;
 	overflow-x:hidden;
 }

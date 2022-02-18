@@ -3,11 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 import * as S from "./style";
 import { useState } from "react";
-import { LoginModal } from "../../organisms";
+import { LoginModal, SideMenu } from "../../organisms";
 
 export default function NavBar() {
   const navigate = useNavigate();
   const [loginModal, setLoginModal] = useState(false);
+  const [sideMenu, setSideMenu] = useState(false);
   const login = localStorage.getItem("login") === "true" ? true : false;
 
   const onLogin = () => {
@@ -27,15 +28,29 @@ export default function NavBar() {
         onClick={() => navigate("/")}
         pointer={true}
       />
-      <Text innerText="프로모션" bold={true} hover={true} />
-      <Text innerText="오픈예정 지점" bold={true} hover={true} />
-      <Text innerText="공유창고 종류" bold={true} hover={true} />
-      <Text innerText="1:1문의" hover={true} />
-      <Text
-        innerText={login ? "로그아웃" : "로그인"}
-        hover={true}
-        onClick={onLogin}
-      />
+      <S.NavItem>
+        <Text innerText="프로모션" bold={true} hover={true} />
+      </S.NavItem>
+      <S.NavItem>
+        <Text innerText="오픈예정 지점" bold={true} hover={true} />
+      </S.NavItem>
+      <S.NavItem>
+        <Text innerText="공유창고 종류" bold={true} hover={true} />
+      </S.NavItem>
+      <S.NavItem>
+        <Text innerText="1:1문의" hover={true} />
+      </S.NavItem>
+      <S.NavItem>
+        <Text
+          innerText={login ? "로그아웃" : "로그인"}
+          hover={true}
+          onClick={onLogin}
+        />
+      </S.NavItem>
+      <S.SideMenu>
+        <Text innerText="메뉴" hover={true} onClick={() => setSideMenu(true)} />
+      </S.SideMenu>
+      {sideMenu && <SideMenu closeMenu={() => setSideMenu(false)} />}
       {loginModal && <LoginModal closeModal={() => setLoginModal(false)} />}
     </S.NavBar>
   );

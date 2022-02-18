@@ -22,16 +22,36 @@ export default function Footer() {
         pointer={true}
       />
       <FlexBox direction="column">
-        <Text innerText="대표: 성정학" />
-        <Text innerText="서울시 강남구 역삼로8길 3, 2층" />
-        <Text innerText="사업자등록번호: 530-86-00179" />
-        <Text innerText="통신판매업신고번호: 제2019-서울강남-01917" />
+        <Text innerText="대표: 성정학" color="#9c9c9c" size="small" />
+        <Text
+          innerText="서울시 강남구 역삼로8길 3, 2층"
+          color="#9c9c9c"
+          size="small"
+        />
+        <Text
+          innerText="사업자등록번호: 530-86-00179"
+          color="#9c9c9c"
+          size="small"
+        />
+        <Text
+          innerText="통신판매업신고번호: 제2019-서울강남-01917"
+          color="#9c9c9c"
+          size="small"
+        />
       </FlexBox>
       <FlexBox direction="column">
-        <Text innerText="고객센터 월요일 – 금요일 오전10시 ~ 오후7시" />
-        <Text innerText="픽업/배송 월요일 – 금요일 오전10시 ~ 오후8시" />
-        <Text innerText="*주말 및 공휴일 휴무" />
-        <Text innerText="셀프스토리지 연중무휴" />
+        <Text
+          innerText="고객센터 월요일 – 금요일 오전10시 ~ 오후7시"
+          color="#9c9c9c"
+          size="small"
+        />
+        <Text
+          innerText="픽업/배송 월요일 – 금요일 오전10시 ~ 오후8시"
+          color="#9c9c9c"
+          size="small"
+        />
+        <Text innerText="*주말 및 공휴일 휴무" color="#9c9c9c" size="small" />
+        <Text innerText="셀프스토리지 연중무휴" color="#9c9c9c" size="small" />
       </FlexBox>
       <FlexBox justifyContent="center">
         <Image src="/images/visa_img.jpeg" width="2.5rem" />
