@@ -4,6 +4,7 @@ import { Footer, NavBar } from "./components/molcules";
 import GlobalStyle from "./GlobalStyle";
 
 import Main from "./pages/Main";
+import Signup from "./pages/Signup";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       <Footer />
     </div>

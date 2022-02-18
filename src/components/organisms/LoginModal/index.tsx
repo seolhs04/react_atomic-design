@@ -13,7 +13,7 @@ export default function LoginModal({ closeModal }: LoginModalProps) {
   const id = useInput("");
   const password = useInput("");
 
-  const onLogin = (e: React.FormEvent<HTMLFormElement>) => {
+  const onLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (sessionStorage.getItem(id.value) === password.value) {
       navigate("/");
@@ -36,7 +36,15 @@ export default function LoginModal({ closeModal }: LoginModalProps) {
               <Input padding="0.5em" {...id} required />
               <Input padding="0.5em" {...password} type="password" required />
               <Button innerText="로그인" ButtonColor="yellow" margin="auto" />
-              <Text innerText="회원가입" size="small" hover={true} />
+              <Text
+                innerText="회원가입"
+                size="small"
+                hover={true}
+                onClick={() => {
+                  closeModal();
+                  navigate("/signup");
+                }}
+              />
             </FlexBox>
           </form>
         </FlexBox>
